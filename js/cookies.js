@@ -1,0 +1,1 @@
+document.cookie = "item=milk, expires=sat"

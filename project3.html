@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 20px 100px;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 0px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid grey 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #aqua {
+            background-color: aquamarine;
+        }
+
+        #violet {
+            background-color: #ce9aff;
+        }
+
+        #black {
+            background-color: black;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="https://c8.alamy.com/comp/ET2BYB/group-of-business-people-holding-the-alphabet-ET2BYB.jpg" alt="">
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit delectus nisi, laudantium expedita sunt illo
+        perferendis aperiam sapiente nemo aspernatur voluptatibus possimus corrupti suscipit velit quidem architecto
+        rerum quod ea! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod voluptatem eos expedita quas
+        recusandae sequi placeat asperiores facilis. Eum, pariatur minima. Aliquid vel eveniet animi fugiat quas eos
+        rerum modi!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio adipisci quo fugiat cupiditate consectetur! Vero,
+        sint nobis. Pariatur ullam, suscipit rerum ratione, tenetur expedita, consequatur at vitae error hic voluptatem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel labore magnam natus exercitationem cum
+        consequatur quidem alias nesciunt dignissimos nisi, sed illum non fugit sequi ducimus aliquam suscipit quasi.
+    </p>
+
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text")
+            if(color == "#000000"){
+               for(let elm of txt){
+                elm.style.color = "white"
+               } 
+            }else{
+                for(let elm of txt){
+                elm.style.color = "black"
+               } 
+            }
+        }
+    </script>
+</body>
+
+</html>
